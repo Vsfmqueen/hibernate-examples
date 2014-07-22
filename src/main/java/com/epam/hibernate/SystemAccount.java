@@ -10,14 +10,11 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "system_account")
 public class SystemAccount extends Account {
-    @Id
-    private Long id;
     private String owner;
 
     @Override
     public String toString() {
         return super.toString() + "SystemAccount{" +
-                "id=" + id +
                 ", owner='" + owner + '\'' +
                 '}';
     }
