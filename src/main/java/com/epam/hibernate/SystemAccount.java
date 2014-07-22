@@ -1,5 +1,6 @@
 package com.epam.hibernate;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -8,7 +9,7 @@ import javax.persistence.Table;
  * Created by Vera_Sidarovich on 7/21/2014.
  */
 @Entity
-@Table(name = "system_account")
+@DiscriminatorValue("system")
 public class SystemAccount extends Account {
     private String owner;
 
