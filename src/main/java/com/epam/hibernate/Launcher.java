@@ -20,7 +20,7 @@ public class Launcher {
         SessionFactory sessionFactory = configuration.buildSessionFactory(ssrb.build());
         Session session = sessionFactory.openSession();
 
-        Criteria criteria = session.createCriteria(SystemAccount.class);
+        Criteria criteria = session.createCriteria(UserAccount.class);
         List<SystemAccount> accounts = criteria.list();
         System.out.println(accounts);
     }

@@ -9,7 +9,7 @@ import javax.persistence.Table;
  * Created by Vera_Sidarovich on 7/21/2014.
  */
 @Entity
-@DiscriminatorValue("system")
+@Table(name = "system_account")
 public class SystemAccount extends Account {
     private String owner;
 

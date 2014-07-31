@@ -6,7 +6,8 @@ import javax.persistence.*;
  * Created by Vera_Sidarovich on 7/21/2014.
  */
 @Entity
-@DiscriminatorValue("user")
+@Table(name = "user_account")
+@PrimaryKeyJoinColumn(name = "user_id")
 public class UserAccount extends Account {
     private String firstName;
     private String lastName;

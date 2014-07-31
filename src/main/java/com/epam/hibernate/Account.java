@@ -7,9 +7,8 @@ import java.io.Serializable;
  * Created by Vera_Sidarovich on 7/21/2014.
  */
 @Entity(name = "account")
-@DiscriminatorColumn(name = "account_type", discriminatorType = DiscriminatorType.STRING)
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-public abstract class Account implements Serializable {
+@Inheritance(strategy = InheritanceType.JOINED)
+public class Account implements Serializable {
     @Id
     private Long id;
     @Column(name = "login")
